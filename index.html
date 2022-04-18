@@ -24,8 +24,8 @@
 
                     <ul class="navbar-nav me-auto mb-2 mb-md-0 ">
                         <li class="nav-item active">
-                            <a href="#" class="nav-link active" aria-current="page">
-                                    Teste1
+                            <a href="#YoutubePlayer" class="nav-link active" aria-current="page">
+                                    Video
                         </a>
                         </li>
                         <li class="nav-item active">
@@ -51,15 +51,49 @@
     <main class="container">
 
         <header>
-            <h1>Esse é o nosso mapinha
+            <h1>Esse é o player do YouTube
             </h1>
         </header>
+        <section id="YoutubePlayer">
+            <div class="row-cols-1">
+                <div class="col my-2 py-2 d-flex justify-content-center">
+                    <article class="container border border-1">
+                        <header class="text-center">
+                            <h3>Como versionar códigos utilizando gitFlow</h3>
+                        </header>
+                        <p>
+                            O Gitflow é um fluxo de trabalho legado do Git que no começo era uma estratégia inovadora e revolucionária para gerenciar ramificações do Git. O Gitflow perdeu popularidade para fluxos de trabalho baseados em troncos, que hoje são considerados práticas
+                            recomendadas para o desenvolvimento moderno e contínuo de softwares e práticas de DevOps.
+                        </p>
+                    </article>
+                </div>
+            </div>
+            <div class="row-cols-1">
+                <div class="col my-2 py-3 d-flex justify-content-center">
+                    <div id="video">
+                    </div>
+                </div>
+
+            </div>
+            <div class="row-cols-1 d-flex justify-content-center">
+                <div class="bg-dark text-light col-3 my-2 py-3 rounded-3 align-content-center" id="visualizado"></div>
+            </div>
+        </section>
     </main>
 
-    <footer>
+    <footer class="footer pt-3 text-muted ">
+        <div class="container text-center mx-auto">
+            <ul class="list-group-horizontal ">
+                <li class="list-inline-item border border-2 border-light rounded-pill"><a class=" nav-link link-light" href="https://www.linkedin.com/in/henriquedepaularodrigues/" target="_blank">linkedIn </a></li>
+                <li class="list-inline-item border border-2 border-light rounded-pill"><a class=" nav-link link-light" href="https://github.com/bidwolf" target="_blank">github</a></li>
+                <li class="list-inline-item border border-2 border-light rounded-pill"><a class=" nav-link link-light" href="https://web.dio.me/users/tec_henriquedepaula?tab=achievements" target="_blank">DIO</a></li>
+            </ul>
+            <p>Construído por Henrique de Paula Rodrigues utilizando <a class="link-light" href="https://getbootstrap.com.br/">Bootstrap</a> </p>
+        </div>
 
     </footer>
-    <script src="./script.js"></script>
+    <script type="module" src="./scripts/script.js"></script>
+    <script src="./scripts/ytPlayer.js"></script>
 </body>
 
 </html>

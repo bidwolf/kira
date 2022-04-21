@@ -23,6 +23,8 @@
     },
     "homepage": "https://github.com/bidwolf/where_my_map#readme",
     "dependencies": {
+        "express": "^4.17.3",
+        "express-handlebars": "^6.0.5",
         "jquery": "^3.6.0"
     }
 }

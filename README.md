@@ -1,6 +1,6 @@
-# where_my_map
+# kira
 
-Aplicação criada para testar e aprender conhecimentos de git e gitflow enquanto tentamos esconder um mapa responsivamente com a API do Google Maps e com o framework Bootstrap
+Aplicação criada para testar e aprender conhecimentos de git e gitflow na construção de um site responsivo utilizando node.js, Express.js e bootstrap.
 
 ## Tecnologias utilizadas
 
@@ -9,11 +9,10 @@ Aplicação criada para testar e aprender conhecimentos de git e gitflow enquant
 - HTML
 - CSS
 - Javascript
-- PHP
+- Node.js
+- Express.js
 
 ## Links úteis
-
-- [Google Maps API](https://developers.google.com/maps/apis-by-platform)
 
 - [Bootstrap Documentation](https://getbootstrap.com/docs/5.1)
 

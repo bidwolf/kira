@@ -1,7 +1,7 @@
 {
-    "name": "where_my_map",
-    "version": "1.0.0",
-    "description": "Aplicação criada para testar e aprender conhecimentos de git e gitflow enquanto tentamos esconder um mapa responsivamente",
+    "name": "kira",
+    "version": "0.1.0",
+    "description": "Aplicação criada para testar e aprender conhecimentos de git e gitflow na construção de um site responsivo utilizando node.js, Express.js e bootstrap.",
     "main": "script.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,8 +11,8 @@
         "url": "git+https://github.com/bidwolf/where_my_map.git"
     },
     "keywords": [
-        "google-maps",
-        "maps",
+        "webSite",
+        "Kira",
         "bootstrap",
         "responsively"
     ],

@@ -1,10 +1,11 @@
 const express = require('express');
 const expressHandlebars = require('express-handlebars');
+const middleware = require('/Programação/lexie/index');
 const app = express();
 const port = process.env.PORT || 3000;
 const handlers = require('./lib/handlers');
 //const weatherMiddleware = require('./lib/middleware/weather');
-
+app.use(middleware);
 app.use(express.static(__dirname + '/public')); //auxilia nas rotas dos arquivos dentro das páginas
 //app.use(weatherMiddleware);
 // Exemplo de helper para seções
@@ -21,6 +22,7 @@ let handlebarsEngine = expressHandlebars.engine({
 app.engine('handlebars', handlebarsEngine);
 app.set('view engine', 'handlebars');
 app.get('/home', handlers.home);
+app.get('/produtos', handlers.produtos);
 app.use(handlers.notFound);
 app.use(handlers.serverError);
 

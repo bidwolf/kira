@@ -36,4 +36,6 @@ footer {
     background-image: linear-gradient(to right, rgb(115, 30, 30), rgba(255, 255, 255, 0.1));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    position: sticky;
+    bottom: 0;
 }

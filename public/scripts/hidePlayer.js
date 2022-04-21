@@ -1,10 +1,3 @@
-function gerarBotão(onclickFunction) {
-    let changeButton = document.getElementById("visualizado");
-    let button = document.createElement("div");
-    button.innerHTML = ` Para ${onclickFunction} o video <button onclick="${onclickFunction}()" class="btn btn-light display-flex justify-content-center">Clique aqui</button>`;
-    changeButton.appendChild(button);
-}
-
 function mostrarElemento(elemento) {
     if (elemento instanceof HTMLElement) {
         elemento.style.visibility = "visible";
@@ -27,16 +20,24 @@ export function mostrar() {
     let videos = Array.from(document.getElementsByTagName("iframe"));
     videos.forEach(video => mostrarElemento(video));
     let diVisualizado = document.getElementById("visualizado") && document.getElementById("visualizado").children;
-    if (diVisualizado.length == 0) {
+    let interação = diVisualizado.length;
+    if (interação == 0) {
         gerarBotão("esconder");
         gerarBotão("mostrar");
     }
-    let botõesInHTML = Array.from(diVisualizado).map((botão) => getOnloadFunctionName(botão));
+    let botõesInHTML = Array.from(diVisualizado).map((div) => div.children[1]);
+    if (interação == 0) {
+        botõesInHTML[1].addEventListener('click', () => mostrar());
+        botõesInHTML[0].addEventListener('click', () => esconder());
+    }
+
     for (let index = 0; index < botõesInHTML.length; index++) {
-        const element = botõesInHTML[index];
-        if (element == "mostrar()")
+        let botão = botõesInHTML[index];
+        if (botão.id == "mostrar") {
             esconderElemento(diVisualizado[index]);
-        if (element == "esconder()") {
+        }
+
+        if (botão.id == "esconder") {
             mostrarElemento(diVisualizado[index]);
         }
     }
@@ -48,36 +49,36 @@ export function mostrar() {
 
 }
 
-function setIsVisualized(state) {
-    if (window.localStorage) {
-        window.localStorage.setItem("isVisualized", state);
-        console.log("SAVE STATE WITH : " + state);
-    }
-}
+function gerarBotão(id_button) {
+    let changeButton = document.getElementById("visualizado");
+    let button = document.createElement("div");
+    button.innerHTML = ` <p>Para ${id_button} o video </p><button id="${id_button}" class="btn btn-light display-flex justify-content-center">Clique aqui</button>`;
+    changeButton.appendChild(button);
 
-function getOnloadFunctionName(botão) {
-    if (botão instanceof HTMLElement) {
-        botão = botão.innerHTML;
-        return botão.substring(botão.indexOf("\"") + 1, botão.indexOf(")") + 1);
-    } else
-        throw new TypeError();
 }
 
 export function esconder() {
     document.getElementsByTagName("iframe")[0].style.visibility = "hidden";
     document.getElementsByTagName("iframe")[0].style.display = "none";
     let diVisualizado = document.getElementById("visualizado") && document.getElementById("visualizado").children;
-    if (diVisualizado.length == 0) {
-        gerarBotão("esconder");
+    let interação = diVisualizado.length;
+    if (interação == 0) {
         gerarBotão("mostrar");
+        gerarBotão("esconder");
     }
-    let botõesInHTML = Array.from(diVisualizado).map(botão => getOnloadFunctionName(botão));
+    let botõesInHTML = Array.from(diVisualizado).map((div) => div.children[1]);
+    if (interação == 0) {
+        botõesInHTML[0].addEventListener('click', () => mostrar());
+        botõesInHTML[1].addEventListener('click', () => esconder());
+    }
+
     for (let index = 0; index < botõesInHTML.length; index++) {
-        const element = botõesInHTML[index];
-        if (element == "mostrar()")
+        let element = botõesInHTML[index];
+        if (element.id == "mostrar")
             mostrarElemento(diVisualizado[index]);
-        if (element == "esconder()")
+        if (element.id == "esconder") {
             esconderElemento(diVisualizado[index]);
+        }
     }
 
     let iframe = document.querySelector('iframe');

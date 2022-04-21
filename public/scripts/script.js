@@ -1,5 +1,6 @@
-import { mostrar, esconder } from './hidePlayer';
-(function toggleButton() {
+import * as hide from './hidePlayer.js';
+
+function toggleButton() {
 
     let toggleButton = document.querySelector('[class="navbar-toggler collapsed"]');
     let toggleElements = document.getElementById(toggleButton.getAttribute('aria-controls'));
@@ -15,12 +16,19 @@ import { mostrar, esconder } from './hidePlayer';
         }
 
     });
-})();
+    toggleElements.addEventListener('mouseleave', (e) => {
+        toggleElements.classList.remove("show");
+        toggleButton.setAttribute('aria-expanded', 'false');
+        toggleButton.classList.add("collapsed");
+        console.log(e.target);
+    });
+}
 window.onload = function() {
     if (window.localStorage) {
         if (window.localStorage.getItem("isVisualized") == 'true')
-            esconder();
+            hide.esconder();
         else
-            mostrar();
+            hide.mostrar();
     }
+    toggleButton();
 };

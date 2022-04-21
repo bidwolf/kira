@@ -1,15 +1,25 @@
 //Faz o download da api do YouTube
-function loadYt_API() {
+const api_src = "https://www.youtube.com/player_api";
+
+function load_async(src) {
 
     let tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/player_api";
+    tag.src = src.toString();
 
     let firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 
 }
-loadYt_API();
+
+function setIsVisualized(state) {
+    if (window.localStorage) {
+        window.localStorage.setItem("isVisualized", state);
+        console.log("SAVE STATE WITH : " + state);
+    }
+}
+
+load_async(api_src);
 /*
 function generateYtPlayer(videoId) {
     let yt_players = document.querySelector('#YoutubePlayer');

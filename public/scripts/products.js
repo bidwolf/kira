@@ -6,7 +6,7 @@ for (let i = 0; i < quantidadeDeProdutos; i++) {
 }
 let carregarMais = document.createElement('div');
 carregarMais.innerHTML = `<button class="btn btn-dark rounded-pill ">Carregar Mais</button>`;
-carregarMais.className = "d-grid justify-content-center"
+carregarMais.className = "d-grid justify-content-center";
 carregarMais.addEventListener('click', (e) => {
     for (let i = quantidadeDeProdutos; i < quantidadeDeProdutos + 12; i++) {
         if (produtos[i]) produtos[i].classList.remove("visually-hidden");

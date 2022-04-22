@@ -35,11 +35,21 @@ footer {
     background-image: linear-gradient(to right, rgb(30, 41, 115), rgba(255, 255, 255, 0.1));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    position: sticky;
-    bottom: 0;
 }
 
 footer li:hover {
     background: rgb(0, 26, 157);
     background: radial-gradient(circle, rgba(0, 26, 157, 0.1292892156862745) 0%, rgba(255, 255, 255, 0.06766456582633051) 100%);
+}
+
+.produto {
+    font-size: 14pt;
+    transition: all .3s;
+}
+
+.produto:hover {
+    opacity: 95%;
+    box-shadow: 8px 7px 0 -3px rgba(55, 55, 55, 0.2);
+    z-index: 20;
+    font-size: 16pt;
 }

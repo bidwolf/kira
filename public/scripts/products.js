@@ -5,9 +5,13 @@ for (let i = 0; i < quantidadeDeProdutos; i++) {
     if (produtos[i]) produtos[i].classList.remove("visually-hidden");
 }
 let carregarMais = document.createElement('div');
-carregarMais.innerHTML = `<button class="btn btn-dark rounded-pill ">Carregar Mais</button>`;
+let loadButton = document.createElement('button');
+loadButton.id = "loadMore";
+loadButton.innerHTML = `Carregar Mais`;
+loadButton.className = 'btn btn-dark rounded-pill';
+carregarMais.insertAdjacentElement('afterbegin', loadButton);
 carregarMais.className = "d-grid justify-content-center";
-carregarMais.addEventListener('click', (e) => {
+loadButton.addEventListener('click', (e) => {
     for (let i = quantidadeDeProdutos; i < quantidadeDeProdutos + 12; i++) {
         if (produtos[i]) produtos[i].classList.remove("visually-hidden");
         else break;

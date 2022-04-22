@@ -87,3 +87,11 @@ export function esconder() {
     iframe.classList.remove("border-2");
 
 }
+window.onload = function() {
+    if (window.localStorage) {
+        if (window.localStorage.getItem("isVisualized") == 'true')
+            hide.esconder();
+        else
+            hide.mostrar();
+    }
+};

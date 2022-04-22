@@ -1,5 +1,3 @@
-import * as hide from './hidePlayer.js';
-
 function toggleButton() {
 
     let toggleButton = document.querySelector('[class="navbar-toggler collapsed"]');
@@ -17,18 +15,13 @@ function toggleButton() {
 
     });
     toggleElements.addEventListener('mouseleave', (e) => {
-        toggleElements.classList.remove("show");
-        toggleButton.setAttribute('aria-expanded', 'false');
-        toggleButton.classList.add("collapsed");
-        console.log(e.target);
+        if (toggleElements.classList.contains("show")) {
+            toggleElements.classList.remove("show");
+            toggleButton.setAttribute('aria-expanded', 'false');
+            toggleButton.classList.add("collapsed");
+        }
     });
 }
 window.onload = function() {
-    if (window.localStorage) {
-        if (window.localStorage.getItem("isVisualized") == 'true')
-            hide.esconder();
-        else
-            hide.mostrar();
-    }
     toggleButton();
 };

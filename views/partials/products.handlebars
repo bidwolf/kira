@@ -1,0 +1,17 @@
+
+    <div class="row row-cols-3 text-center">
+        {{#each partials.productsContext}}
+        <div class="col">
+            <div class="card mb-4 rounded-3">
+                <div class="card-header ">
+                    <p class="my-0 fw-normal">{{name}}</p>
+                </div>
+                <div class="card-body bg-dark text-light border border-3 border-light rounded-2">
+                    <a href="{{path}}">Link do produto</a>
+                    <h4>{{price}}</h4>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+

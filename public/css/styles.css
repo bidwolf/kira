@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding-top: 50px;
+    width: 100%;
 }
 
 *,
@@ -24,6 +25,21 @@ header {
 }
 
 nav>div>div.collapse>ul>li :hover {
-    border: 1px solid white;
-    border-radius: 0.2rem;
+    opacity: 75%;
+}
+
+footer {
+    width: 100%;
+    margin-top: 50px;
+    background-color: black;
+    background-image: linear-gradient(to right, rgb(30, 41, 115), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: sticky;
+    bottom: 0;
+}
+
+footer li:hover {
+    background: rgb(0, 26, 157);
+    background: radial-gradient(circle, rgba(0, 26, 157, 0.1292892156862745) 0%, rgba(255, 255, 255, 0.06766456582633051) 100%);
 }

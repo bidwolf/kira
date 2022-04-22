@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
-    <link rel="stylesheet" href="./public/css/styles.css">
-    <link rel="stylesheet" href="public/css/bootstrap/css/bootstrap.min.css">
-    <title>mapas do meu bairro</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.min.css">
 
-<body>
+    <title>Kira site com Node e Express</title>
+{{{_sections.head}}}
+</head>
+<body> 
     <header>
         <!-- Aqui a gente vai colocar o navbar-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
-                <a href="#" class="navbar-brand">Mapa Animal</a>
+                <a href="#" class="navbar-brand">Kira</a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -47,41 +47,12 @@
             </div>
         </nav>
     </header>
-
-    <main class="container">
-
-        <header>
-            <h1>Esse é o player do YouTube
-            </h1>
-        </header>
-        <section id="YoutubePlayer">
-            <div class="row-cols-1">
-                <div class="col my-2 py-2 d-flex justify-content-center">
-                    <article class="container border border-1">
-                        <header class="text-center">
-                            <h3>Como versionar códigos utilizando gitFlow</h3>
-                        </header>
-                        <p>
-                            O Gitflow é um fluxo de trabalho legado do Git que no começo era uma estratégia inovadora e revolucionária para gerenciar ramificações do Git. O Gitflow perdeu popularidade para fluxos de trabalho baseados em troncos, que hoje são considerados práticas
-                            recomendadas para o desenvolvimento moderno e contínuo de softwares e práticas de DevOps.
-                        </p>
-                    </article>
-                </div>
-            </div>
-            <div class="row-cols-1">
-                <div class="col my-2 py-3 d-flex justify-content-center">
-                    <div id="video">
-                    </div>
-                </div>
-
-            </div>
-            <div class="row-cols-1 d-flex justify-content-center">
-                <div class="bg-dark text-light col-3 my-2 py-3 rounded-3 align-content-center" id="visualizado"></div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer pt-3 text-muted ">
+    <div class="container">
+        {{{body}}}
+    </div>
+            
+    
+    <footer class="footer pt-3 pb-1 text-muted ">
         <div class="container text-center mx-auto">
             <ul class="list-group-horizontal ">
                 <li class="list-inline-item border border-2 border-light rounded-pill"><a class=" nav-link link-light" href="https://www.linkedin.com/in/henriquedepaularodrigues/" target="_blank">linkedIn </a></li>
@@ -92,8 +63,7 @@
         </div>
 
     </footer>
-    <script type="module" src="./scripts/script.js"></script>
-    <script src="./scripts/ytPlayer.js"></script>
+   {{{_sections.scripts}}}
+    <script type="module" src="scripts/script.js"></script>
 </body>
-
 </html>

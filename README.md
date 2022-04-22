@@ -1,6 +1,6 @@
-# where_my_map
+# kira
 
-Aplicação criada para testar e aprender conhecimentos de git e gitflow enquanto tentamos esconder um mapa responsivamente com a API do Google Maps e com o framework Bootstrap
+Aplicação criada para testar e aprender conhecimentos de git e gitflow na construção de um site responsivo utilizando node.js, Express.js e bootstrap.
 
 ## Tecnologias utilizadas
 
@@ -9,11 +9,10 @@ Aplicação criada para testar e aprender conhecimentos de git e gitflow enquant
 - HTML
 - CSS
 - Javascript
-- PHP
+- Node.js
+- Express.js
 
 ## Links úteis
-
-- [Google Maps API](https://developers.google.com/maps/apis-by-platform)
 
 - [Bootstrap Documentation](https://getbootstrap.com/docs/5.1)
 
@@ -75,7 +74,7 @@ Claramente nem tudo nele seria novo, e adicionar código a uma feature se resume
 
 ### Feature finalizada, e agora?
 
-Agora é hora de tornar essa nova funcionalidade parte da branch de desenvolvimento. Para isso é necessário executar o comando : `git flow feature finish feature_name`, que vai efetuar as seguintes ações :
+Agora é hora de tornar essa nova funcionalidade parte da branch de desenvolvimento ***MAS LEMBRE-SE DE EFETUAR O PULL ANTES***. Para isso é necessário executar o comando : `git flow feature finish feature_name`, que vai efetuar as seguintes ações :
 
 1. Mudar o Head para a branch de desenvolvimento ( `git checkout develop`)
 
@@ -101,11 +100,13 @@ Parecido com as features, as releases são adicionadas através do comando `git 
 
 ### O que adicionar na branch Release
 
-Essa nova atualização irá adicionar todas as funcionalidades atuais que foram adicionadas a branch de desenvolvimento, portanto nenhum novo recurso pode ser adicionado depois deste ponto — apenas atualizações de segurança, geração de documentação e outras tarefas relacionadas ao lançamento da nova versão devem ser feitas nesta ramificação.
+Essa nova atualização irá adicionar todas as funcionalidades atuais que foram adicionadas à branch de desenvolvimento, portanto nenhum novo recurso pode ser adicionado depois deste ponto — apenas atualizações de segurança, geração de documentação e outras tarefas relacionadas ao lançamento da nova versão devem ser feitas nesta ramificação.
 
 ### Release finalizada, e agora?
 
-Agora é hora de tornar essa nova versão parte do ambiente de produção. Entretanto vale ressaltar que a branch de desenvolvimento também deve ser atualizada, pois, novos recursos importantes podem ter sido adicionados na branch de desenvolvimento atual de forma que as novas funcionalidades que estão sendo desenvolvidas devem conter esses recursos. Para isso é necessário executar o comando : `git flow release finish release_tag`, que vai efetuar as seguintes ações :
+Agora é hora de tornar essa nova versão parte do ambiente de produção. Entretanto vale ressaltar que a branch de desenvolvimento também deve ser atualizada, pois, novos recursos importantes podem ter sido adicionados na branch de desenvolvimento atual de forma que as novas funcionalidades que estão sendo desenvolvidas devem conter esses recursos.
+
+ Para isso é necessário executar o comando : `git flow release finish release_tag`, que vai efetuar as seguintes ações :
 
 1. Mudar o Head para a branch de produção ( `git checkout main`)
 
@@ -117,4 +118,6 @@ Agora é hora de tornar essa nova versão parte do ambiente de produção. Entre
 
 5. Atualizar a tag do projeto ( `git tag -a prefix_tag1.4` )
 
-6. Excluir a branch da Release criada ( `git branch -D release/release_tag`)
+6. Excluir a branch da Release criada ( `git branch -D release/release_tag`).
+
+Feito isso o código estará disponível para poder ser analisado pelos administradores do repositório. Recomenda-se fortemente que nesse ponto seja feito um pull request.

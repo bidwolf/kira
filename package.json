@@ -1,28 +1,30 @@
 {
-  "name": "where_my_map",
-  "version": "1.0.0",
-  "description": "Aplicação criada para testar e aprender conhecimentos de git e gitflow enquanto tentamos esconder um mapa responsivamente",
-  "main": "script.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bidwolf/where_my_map.git"
-  },
-  "keywords": [
-    "google-maps",
-    "maps",
-    "bootstrap",
-    "resposivity"
-  ],
-  "author": "Henrique de Paula Rodrigues,Maria Fernanda da silva",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bidwolf/where_my_map/issues"
-  },
-  "homepage": "https://github.com/bidwolf/where_my_map#readme",
-  "dependencies": {
-    "jquery": "^3.6.0"
-  }
+    "name": "kira",
+    "version": "0.1.0",
+    "description": "Aplicação criada para testar e aprender conhecimentos de git e gitflow na construção de um site responsivo utilizando node.js, Express.js e bootstrap.",
+    "main": "script.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/bidwolf/where_my_map.git"
+    },
+    "keywords": [
+        "webSite",
+        "Kira",
+        "bootstrap",
+        "responsively"
+    ],
+    "author": "Henrique de Paula Rodrigues,Maria Fernanda da silva",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/bidwolf/where_my_map/issues"
+    },
+    "homepage": "https://github.com/bidwolf/where_my_map#readme",
+    "dependencies": {
+        "express": "^4.17.3",
+        "express-handlebars": "^6.0.5",
+        "jquery": "^3.6.0"
+    }
 }
